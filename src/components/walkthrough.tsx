@@ -65,13 +65,14 @@ function ViewToggle() {
     <button
       type="button"
       onClick={() => setView(view === "hall" ? "classic" : "hall")}
+      aria-pressed={view === "hall"}
       className="fixed top-3 right-3 z-[120] inline-flex min-h-11 cursor-pointer items-center border-2 border-ink bg-paper px-3 py-2 font-mono text-[10px] font-bold tracking-wider text-ink uppercase shadow-[3px_3px_0_var(--ink)] transition-colors hover:bg-signal sm:top-5 sm:right-5 sm:text-xs"
       style={{
         marginTop: "env(safe-area-inset-top)",
         marginRight: "env(safe-area-inset-right)",
       }}
     >
-      {view === "hall" ? t.walkthrough.close : "Walk-through view"}
+      {view === "hall" ? t.walkthrough.close : t.walkthrough.open}
     </button>
   );
 }
@@ -227,6 +228,10 @@ function Hall() {
           <motion.div
             key="entrance"
             exit={{ opacity: 0, scale: 1.25, transition: { duration: 0.6, ease: [0.7, 0, 0.3, 1] } }}
+            onClick={(e) => {
+              if ((e.target as HTMLElement).closest("button")) return;
+              enter(0);
+            }}
             className="flex h-full flex-col items-center justify-center overflow-y-auto px-6 py-16 text-center"
           >
             <p className="font-mono text-[10px] font-bold tracking-[0.25em] text-ink-soft uppercase">
@@ -257,9 +262,13 @@ function Hall() {
               ))}
             </ul>
 
-            <p className="mt-10 flex animate-pulse items-center gap-2 font-mono text-[10px] font-bold tracking-[0.2em] text-signal uppercase">
-              <ArrowDown className="h-4 w-4" /> {t.walkthrough.enterHint}
-            </p>
+            <button
+              type="button"
+              onClick={() => enter(0)}
+              className="mt-10 inline-flex animate-pulse cursor-pointer items-center gap-2 border-2 border-ink bg-paper px-4 py-2.5 font-mono text-[10px] font-bold tracking-[0.2em] uppercase shadow-[3px_3px_0_var(--ink)] transition-colors hover:bg-signal hover:text-white"
+            >
+              <ArrowDown className="h-4 w-4" /> {t.walkthrough.tapEnter}
+            </button>
           </motion.div>
         ) : (
           <motion.div

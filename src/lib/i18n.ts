@@ -146,6 +146,8 @@ export const dict = {
       keys: "↑ ↓ navigate · Esc exit",
       enterRoom: "Enter section",
       close: "Classic view",
+      open: "Walk-through view",
+      tapEnter: "Click anywhere or press ↓ to enter",
     },
   },
   fr: {
@@ -295,6 +297,8 @@ export const dict = {
       keys: "↑ ↓ naviguer · Échap pour sortir",
       enterRoom: "Entrer dans la section",
       close: "Vue classique",
+      open: "Visite guidée",
+      tapEnter: "Clique n'importe où ou appuie sur ↓ pour entrer",
     },
   },
 };
