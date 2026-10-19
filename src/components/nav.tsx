@@ -1,7 +1,7 @@
 "use client";
 
 import { Moon, Sun } from "lucide-react";
-import { BrandGithub, BrandInstagram, BrandLinkedin } from "./icons";
+import { BrandGithub, BrandLinkedin } from "./icons";
 import { navLinks, profile } from "@/lib/data";
 import { usePref } from "./providers";
 
@@ -72,15 +72,6 @@ export function Nav() {
             className="hidden items-center border-l-2 border-ink px-3 transition-colors hover:bg-ink hover:text-paper lg:flex"
           >
             <BrandLinkedin className="h-3.5 w-3.5" />
-          </a>
-          <a
-            href={profile.instagram}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-            className="hidden items-center border-l-2 border-ink px-3 transition-colors hover:bg-ink hover:text-paper lg:flex"
-          >
-            <BrandInstagram className="h-3.5 w-3.5" />
           </a>
         </div>
       </nav>

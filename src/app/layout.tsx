@@ -53,8 +53,8 @@ const jsonLd = {
   name: profile.name,
   url,
   jobTitle: "Software Engineer",
-  address: { "@type": "PostalAddress", addressLocality: "Tunis", addressCountry: "TN" },
-  sameAs: [profile.github, profile.linkedin, profile.facebook, profile.instagram],
+  address: { "@type": "PostalAddress", addressLocality: "Zaghouan", addressCountry: "TN" },
+  sameAs: [profile.github, profile.linkedin, profile.facebook],
   knowsAbout: [
     "React.js",
     "Next.js",

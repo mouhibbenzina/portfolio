@@ -32,9 +32,9 @@ export function Hero() {
       </div>
 
       <h1 className="font-display mt-8 text-[21vw] leading-[0.86] uppercase sm:text-[19vw] lg:text-[min(11.6vw,12.5rem)]">
-        <span className="block">Taha Ben</span>
+        <span className="block">{profile.name.split(" ")[0]}</span>
         <span className="relative block text-transparent [-webkit-text-stroke:2px_var(--ink)]">
-          Romdhane
+          {profile.name.split(" ").slice(1).join(" ")}
           <svg
             aria-hidden
             viewBox="0 0 320 20"

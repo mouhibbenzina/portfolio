@@ -19,7 +19,7 @@ export const dict = {
       "AVAILABLE FOR WORK",
       "SOFTWARE ENGINEER",
       "MOBILE & WEB",
-      "TUNIS ⇄ WORLDWIDE",
+      "ZAGHOUAN ⇄ WORLDWIDE",
     ],
     sections: {
       about: { n: "01", label: "Get to know me", title: "About Me" },
@@ -39,7 +39,7 @@ export const dict = {
     },
     about: {
       heading: ["High-impact", "mobile & web", "applications"],
-      body: "Based in Tunis, Tunisia, I am a Software Engineer focused on shipping products people actually use: interactive web platforms, secure backend APIs and mobile experiences. I care about the details, from performance budgets and clean data models to interfaces that feel alive.",
+      body: "Based in Zaghouan, Tunisia, I am a Software Engineer focused on shipping products people actually use: interactive web platforms, secure backend APIs and mobile experiences. I care about the details, from performance budgets and clean data models to interfaces that feel alive.",
       highlight: "Currently open to new opportunities and collaborations.",
       chips: ["React.js", "Next.js", "TypeScript", "Laravel", "Node.js", "Mobile Apps"],
       stats: [
@@ -48,8 +48,8 @@ export const dict = {
         { value: "4", label: "certifications", sub: "from DevOps to AI" },
         { value: "1", label: "mission", sub: "simplify human complexity" },
       ],
-      polaroidCaption: "Taha, Tunis",
-      portraitAlt: "TBR monogram portrait",
+      polaroidCaption: "Mouhib, Zaghouan",
+      portraitAlt: "MBZ monogram portrait",
     },
     skills: {
       note: "Every tile is a technology I use in real projects — hover to inspect.",
@@ -132,10 +132,10 @@ export const dict = {
         whatsapp: "WhatsApp",
         github: "GitHub",
         linkedin: "LinkedIn",
-        location: "Tunis, Tunisia · Remote-friendly",
+        location: "Zaghouan, Tunisia · Remote-friendly",
         availability: "Currently open to new opportunities and collaborations",
       },
-      credits: "Drawn and built by Taha — dynamic edition.",
+      credits: "Drawn and built by Mouhib — dynamic edition.",
       copyright: "All rights reserved.",
     },
   },
@@ -156,10 +156,10 @@ export const dict = {
       mailboxLabel: "Ouvrir Contact",
     },
     marquee: [
-      "DISPONIBLE POUR MISSONS",
+      "DISPONIBLE POUR MISSIONS",
       "INGÉNIEUR LOGICIEL",
       "MOBILE & WEB",
-      "TUNIS ⇄ MONDE ENTIER",
+      "ZAGHOUAN ⇄ MONDE ENTIER",
     ],
     sections: {
       about: { n: "01", label: "Faisons connaissance", title: "À Propos" },
@@ -179,7 +179,7 @@ export const dict = {
     },
     about: {
       heading: ["Applications", "mobile & web", "à fort impact"],
-      body: "Basé à Tunis, je suis ingénieur logiciel orienté livraison de produits que les gens utilisent vraiment : plateformes web interactives, API back-end sécurisées et expériences mobiles. Je soigne les détails, des budgets de performance aux modèles de données propres, jusqu'aux interfaces qui semblent vivantes.",
+      body: "Basé à Zaghouan, je suis ingénieur logiciel orienté livraison de produits que les gens utilisent vraiment : plateformes web interactives, API back-end sécurisées et expériences mobiles. Je soigne les détails, des budgets de performance aux modèles de données propres, jusqu'aux interfaces qui semblent vivantes.",
       highlight: "Actuellement ouvert à de nouvelles opportunités et collaborations.",
       chips: ["React.js", "Next.js", "TypeScript", "Laravel", "Node.js", "Apps Mobiles"],
       stats: [
@@ -188,8 +188,8 @@ export const dict = {
         { value: "4", label: "certifications", sub: "du DevOps à l'IA" },
         { value: "1", label: "mission", sub: "simplifier la complexité humaine" },
       ],
-      polaroidCaption: "Taha, Tunis",
-      portraitAlt: "Portrait monogramme TBR",
+      polaroidCaption: "Mouhib, Zaghouan",
+      portraitAlt: "Portrait monogramme MBZ",
     },
     skills: {
       note: "Chaque tuile est une technologie utilisée sur de vrais projets — survole pour inspecter.",
@@ -272,10 +272,10 @@ export const dict = {
         whatsapp: "WhatsApp",
         github: "GitHub",
         linkedin: "LinkedIn",
-        location: "Tunis, Tunisie · Remote-friendly",
+        location: "Zaghouan, Tunisie · Remote-friendly",
         availability: "Actuellement ouvert à de nouvelles opportunités et collaborations",
       },
-      credits: "Dessiné et construit par Taha — édition dynamique.",
+      credits: "Dessiné et construit par Mouhib — édition dynamique.",
       copyright: "Tous droits réservés.",
     },
   },

@@ -81,7 +81,7 @@ export function About() {
                   fontSize="44"
                   fill="var(--signal)"
                 >
-                  TBR
+                  {profile.monogram.replace(".", "")}
                 </text>
                 <path d="M40 250 Q 100 160 160 250" fill="var(--ink)" opacity="0.9" />
                 <path d="M20 40 q 30 18 60 0" fill="none" stroke="var(--ink)" strokeWidth="3" filter="url(#wobble)" />

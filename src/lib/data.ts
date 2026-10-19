@@ -1,21 +1,21 @@
-export const GITHUB_USER = "TrafiTaha";
-export const WHATSAPP_NUMBER = "21629119181";
+export const GITHUB_USER = "mouhibbenzina";
+export const WHATSAPP_NUMBER = "21625568735";
+export const EMAIL = "mouhib.benzina@zaghouan.r-iset.tn";
 
 export const profile = {
-  name: "Taha Ben Romdhane",
-  firstName: "Taha",
-  monogram: "TBR.",
+  name: "Mouhib Ben Zina",
+  firstName: "Mouhib",
+  monogram: "MBZ.",
   role: { en: "Software Engineer", fr: "Ingénieur Logiciel" },
   roleLong: { en: "Full-Stack Engineer", fr: "Ingénieur Full-Stack" },
-  location: "Tunis, Tunisia",
+  location: "Zaghouan, Tunisia",
   tagline: {
-    en: "Engineering digital tools that simplify human complexity. I design and build performant web platforms and mobile experiences end-to-end — from database schema to pixel.",
-    fr: "Je conçois des outils numériques qui simplifient la complexité humaine. Je bâtis des plateformes web performantes et des expériences mobiles de bout en bout — du schéma de base de données au pixel.",
+    en: "Building performant web and mobile products end-to-end — from database schema to pixel. Currently open to new opportunities and collaborations.",
+    fr: "Je construis des produits web et mobiles performants de bout en bout — du schéma de base de données au pixel. Actuellement ouvert à de nouvelles opportunités et collaborations.",
   },
-  github: "https://github.com/TrafiTaha",
-  linkedin: "https://www.linkedin.com/in/taha-ben-romdhane-765b09371",
-  facebook: "https://www.facebook.com/share/14i4KyFYUsi/",
-  instagram: "https://www.instagram.com/txha_br",
+  github: "https://github.com/mouhibbenzina",
+  linkedin: "https://www.linkedin.com/in/mouhib-benzina-5b8700402",
+  facebook: "https://www.facebook.com/mouhib.benzina.2025/",
   whatsapp: `https://wa.me/${WHATSAPP_NUMBER}`,
 };
 
@@ -31,39 +31,39 @@ export type FeaturedProject = {
 
 export const featuredProjects: FeaturedProject[] = [
   {
-    slug: "alphadocTN",
-    repo: "AlphaDocTN",
-    title: "AlphaDocTN",
-    subtitle: { en: "Enterprise Document Engine", fr: "Moteur Documentaire d'Entreprise" },
+    slug: "zribaiq",
+    repo: "ZribaIQ",
+    title: "ZribaIQ",
+    subtitle: { en: "AI Quiz Platform", fr: "Plateforme de Quiz IA" },
     description: {
-      en: "Enterprise-level document architect built around a strict permission model, so teams only see and sign what they are meant to.",
-      fr: "Architecte documentaire d'entreprise bâti autour d'un modèle de permissions strict : les équipes ne voient et ne signent que ce qui les concerne.",
+      en: "AI-powered quiz application (NexaQuiz) — generates questions on any subject with Claude AI.",
+      fr: "Application de quiz propulsée par l'IA (NexaQuiz) — génère des questions sur n'importe quel sujet avec Claude AI.",
     },
-    tags: ["Laravel", "PHP", "MySQL", "RBAC"],
+    tags: ["Symfony", "PHP", "Claude AI"],
     cover: "docs",
   },
   {
-    slug: "agrisdol",
-    repo: "Agrisdol",
-    title: "Agrisdol",
-    subtitle: { en: "Agricultural Intelligence Platform", fr: "Plateforme d'Intelligence Agricole" },
+    slug: "cleantun",
+    repo: "cleantun",
+    title: "CleanTun",
+    subtitle: { en: "Citizen Waste Reporting", fr: "Signalement Citoyen des Déchets" },
     description: {
-      en: "A smart-farming platform that turns field data into decisions — tracking parcels, inputs and yields for growers.",
-      fr: "Une plateforme d'agriculture intelligente qui transforme les données de terrain en décisions — parcelles, intrants et rendements.",
+      en: "Citizen waste-reporting platform for Tunisia — photo + GPS, interactive map, status tracking and admin dashboard.",
+      fr: "Plateforme citoyenne de signalement des déchets en Tunisie — photo + GPS, carte interactive, suivi des statuts et dashboard admin.",
     },
-    tags: ["Node.js", "Laravel", "SQLite"],
+    tags: ["React", "Leaflet", "Express", "SQLite"],
     cover: "farm",
   },
   {
-    slug: "worksphere",
-    repo: "WorkSphere",
-    title: "WorkSphere",
-    subtitle: { en: "Team Productivity Engine", fr: "Moteur de Productivité d'Équipe" },
+    slug: "club-africain-app",
+    repo: "club-africain-app",
+    title: "Club Africain App",
+    subtitle: { en: "Official Supporters App", fr: "Application Officielle des Supporters" },
     description: {
-      en: "A team synchronization engine designed for high-performance collaboration — tasks, ownership and progress in one place.",
-      fr: "Un moteur de synchronisation d'équipe pensé pour la collaboration haute performance — tâches, responsabilités et progrès au même endroit.",
+      en: "Official mobile app for Club Africain (CATV) supporters — built with React Native (Expo) and TypeScript.",
+      fr: "Application mobile officielle des supporters du Club Africain (CATV) — React Native (Expo) et TypeScript.",
     },
-    tags: ["Laravel", "Blade", "MySQL"],
+    tags: ["React Native", "Expo", "TypeScript"],
     cover: "board",
   },
 ];

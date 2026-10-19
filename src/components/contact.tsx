@@ -3,7 +3,7 @@
 import { useState, useSyncExternalStore, type FormEvent } from "react";
 import { Mail, MessageCircle, Pin } from "lucide-react";
 import { BrandGithub, BrandLinkedin } from "./icons";
-import { profile, WHATSAPP_NUMBER } from "@/lib/data";
+import { EMAIL, profile, WHATSAPP_NUMBER } from "@/lib/data";
 import { usePref } from "./providers";
 import { SectionShell } from "./section";
 
@@ -55,9 +55,9 @@ export function Contact() {
     setSent(true);
   }
 
-  const mailHref = () => {
+  const mailHref = (body?: string) => {
     const subject = encodeURIComponent(lang === "fr" ? "Brief de projet" : "Project brief");
-    return `mailto:?subject=${subject}`;
+    return `mailto:${EMAIL}?subject=${subject}${body ? `&body=${encodeURIComponent(body)}` : ""}`;
   };
 
   return (
@@ -108,6 +108,12 @@ export function Contact() {
               className="flex items-center gap-3 border-2 border-ink bg-surface px-4 py-3 font-mono text-[11px] font-bold tracking-[0.16em] uppercase shadow-[3px_3px_0_var(--ink)] transition-transform hover:-translate-y-0.5"
             >
               <BrandLinkedin className="h-4 w-4" /> {c.channels.linkedin} ↗
+            </a>
+            <a
+              href={`mailto:${EMAIL}`}
+              className="flex items-center gap-3 border-2 border-ink bg-surface px-4 py-3 font-mono text-[11px] font-bold tracking-[0.16em] uppercase shadow-[3px_3px_0_var(--ink)] transition-transform hover:-translate-y-0.5"
+            >
+              <Mail className="h-4 w-4" /> {EMAIL}
             </a>
             <p className="flex items-center gap-3 px-1 font-mono text-[10px] tracking-[0.14em] text-ink-soft uppercase">
               <Pin className="h-4 w-4" /> {c.channels.location}
@@ -218,12 +224,17 @@ export function Contact() {
             >
               <MessageCircle className="h-4 w-4" /> {c.form.submit}
             </button>
-            <a
-              href={mailHref()}
+            <button
+              type="button"
+              onClick={(e) => {
+                const form = e.currentTarget.closest("form");
+                if (!form) return;
+                window.location.href = mailHref(buildBrief(new FormData(form)));
+              }}
               className="inline-flex items-center gap-2 font-mono text-[10px] font-bold tracking-[0.16em] text-ink-soft uppercase underline decoration-signal decoration-2 underline-offset-4 hover:text-signal"
             >
               <Mail className="h-3.5 w-3.5" /> {c.form.submitAlt}
-            </a>
+            </button>
           </div>
 
           {sent && (
