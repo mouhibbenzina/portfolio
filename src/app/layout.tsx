@@ -30,7 +30,7 @@ const jetbrains = JetBrains_Mono({
   weight: ["400", "700"],
 });
 
-const url = "https://taha-ben-romdhane.vercel.app";
+const url = "https://mouhib-benzina.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(url),
