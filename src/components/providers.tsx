@@ -7,6 +7,7 @@ import {
   useSyncExternalStore,
   type ReactNode,
 } from "react";
+import { MotionConfig } from "framer-motion";
 import { dict, type Dict, type Lang } from "@/lib/i18n";
 
 type Theme = "light" | "dark";
@@ -95,7 +96,11 @@ export function PrefProvider({ children }: { children: ReactNode }) {
   void dark;
 
   const value: Ctx = { lang, setLang, t: dict[lang], theme, toggleTheme };
-  return <PrefContext.Provider value={value}>{children}</PrefContext.Provider>;
+  return (
+    <PrefContext.Provider value={value}>
+      <MotionConfig reducedMotion="user">{children}</MotionConfig>
+    </PrefContext.Provider>
+  );
 }
 
 export function usePref() {

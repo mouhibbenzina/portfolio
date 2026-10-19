@@ -2,6 +2,7 @@
 
 import { Award } from "lucide-react";
 import { certificates } from "@/lib/data";
+import { Fade } from "./animated";
 import { usePref } from "./providers";
 import { SectionShell } from "./section";
 
@@ -17,8 +18,9 @@ export function Certificates() {
     >
       <div className="relative ml-1 border-l-2 border-ink pl-6 md:ml-3 md:pl-10">
         <div className="grid gap-8 md:grid-cols-2">
-          {certificates.map((c) => (
-            <div key={c.title} className="relative">
+          {certificates.map((c, i) => (
+            <Fade key={c.title} delay={(i % 2) * 0.1} className="relative">
+              <div className="relative">
               <span className="absolute -left-[calc(1.5rem+9px)] top-7 h-4 w-4 rounded-full border-2 border-ink bg-signal shadow-[2px_2px_0_var(--ink)] md:-left-[calc(2.5rem+9px)]" />
               <article
                 className="border-[3px] border-ink bg-surface p-5 shadow-[6px_6px_0_var(--ink)] transition-transform hover:rotate-0"
@@ -54,6 +56,7 @@ export function Certificates() {
                 </div>
               </article>
             </div>
+            </Fade>
           ))}
         </div>
       </div>

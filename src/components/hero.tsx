@@ -1,6 +1,7 @@
 "use client";
 
 import { profile } from "@/lib/data";
+import { Reveal } from "./animated";
 import { usePref } from "./providers";
 
 const techChips = [
@@ -31,7 +32,8 @@ export function Hero() {
         </p>
       </div>
 
-      <h1 className="font-display mt-8 text-[21vw] leading-[0.86] uppercase sm:text-[19vw] lg:text-[min(11.6vw,12.5rem)]">
+      <Reveal y={40}>
+        <h1 className="font-display mt-8 text-[21vw] leading-[0.86] uppercase sm:text-[19vw] lg:text-[min(11.6vw,12.5rem)]">
         <span className="block">{profile.name.split(" ")[0]}</span>
         <span className="relative block text-transparent [-webkit-text-stroke:2px_var(--ink)]">
           {profile.name.split(" ").slice(1).join(" ")}
@@ -51,9 +53,11 @@ export function Hero() {
           </svg>
         </span>
       </h1>
+      </Reveal>
 
       <div className="mt-12 grid items-start gap-8 lg:grid-cols-[1.1fr_1fr]">
         <div className="relative">
+          <Reveal delay={0.1}>
           <div
             role="note"
             className="max-w-xl border-2 border-ink bg-surface p-4 font-mono text-[11px] leading-relaxed tracking-wide text-ink-soft shadow-[3px_3px_0_var(--ink)]"
@@ -82,9 +86,11 @@ export function Hero() {
               {t.sections.projects.title} →
             </a>
           </div>
+        </Reveal>
         </div>
 
         <div className="relative">
+          <Reveal delay={0.2}>
           <span className="absolute -top-6 right-0 z-10 rotate-6 border-2 border-ink bg-signal px-3 py-1.5 font-mono text-[10px] font-bold tracking-[0.18em] text-white uppercase shadow-[3px_3px_0_var(--ink)]">
             {t.hero.openToWork}
           </span>
@@ -239,6 +245,7 @@ export function Hero() {
               OPEN TO WORK
             </text>
           </svg>
+        </Reveal>
         </div>
       </div>
     </section>

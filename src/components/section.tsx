@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { AnimatedHeading, Reveal } from "./animated";
 
 export function WobbleDefs() {
   return (
@@ -75,11 +76,12 @@ export function SectionShell({
           {label}
         </span>
       </div>
-      <h2 className="font-display mt-6 text-[17vw] leading-[0.95] tracking-tight uppercase sm:text-7xl md:text-8xl lg:text-9xl">
-        {title}
-      </h2>
+      <AnimatedHeading
+        text={title}
+        className="font-display mt-6 text-[17vw] leading-[0.95] tracking-tight uppercase sm:text-7xl md:text-8xl lg:text-9xl"
+      />
       <Squiggle className="mt-1 w-40 md:w-56" />
-      <div className="mt-10 md:mt-14">{children}</div>
+      <Reveal className="mt-10 md:mt-14">{children}</Reveal>
     </section>
   );
 }

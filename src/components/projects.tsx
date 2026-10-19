@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { ArrowUpRight, Plus } from "lucide-react";
 import { BrandGithub } from "./icons";
 import { featuredProjects, GITHUB_USER, profile } from "@/lib/data";
@@ -122,8 +123,12 @@ export function Projects({ repos }: { repos: GithubRepo[] | null }) {
           );
           const isOpen = open === p.slug;
           return (
-            <article
+            <motion.article
               key={p.slug}
+              initial={{ opacity: 0, y: 28 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.6, delay: 0.05 * i, ease: [0.22, 1, 0.36, 1] }}
               className="border-[3px] border-ink bg-surface shadow-[8px_8px_0_var(--ink)] lg:sticky"
               style={{ top: `${6 + i * 0.9}rem` }}
             >
@@ -221,7 +226,7 @@ export function Projects({ repos }: { repos: GithubRepo[] | null }) {
                   </div>
                 </div>
               </div>
-            </article>
+            </motion.article>
           );
         })}
       </div>
