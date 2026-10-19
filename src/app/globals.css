@@ -171,3 +171,19 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+@keyframes mote {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.12;
+  }
+  50% {
+    transform: translateY(-42px);
+    opacity: 0.45;
+  }
+}
+
+.animate-mote {
+  animation: mote 9s ease-in-out infinite;
+}

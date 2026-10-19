@@ -4,6 +4,7 @@ import "./globals.css";
 import { PrefProvider } from "@/components/providers";
 import { WobbleDefs } from "@/components/section";
 import { Nav } from "@/components/nav";
+import { Walkthrough } from "@/components/walkthrough";
 import { profile } from "@/lib/data";
 
 const anton = Anton({
@@ -85,6 +86,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <WobbleDefs />
           <Nav />
           <main className="relative min-h-svh w-full overflow-x-clip">{children}</main>
+          <Walkthrough />
         </PrefProvider>
       </body>
     </html>

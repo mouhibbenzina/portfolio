@@ -11,6 +11,7 @@ import { MotionConfig } from "framer-motion";
 import { dict, type Dict, type Lang } from "@/lib/i18n";
 
 type Theme = "light" | "dark";
+export type View = "classic" | "hall";
 
 type Ctx = {
   lang: Lang;
@@ -18,11 +19,14 @@ type Ctx = {
   t: Dict;
   theme: Theme;
   toggleTheme: () => void;
+  view: View;
+  setView: (v: View) => void;
 };
 
 const EVENT = "tbr-pref-change";
 const LANG_KEY = "tbr-lang";
 const THEME_KEY = "tbr-theme";
+const VIEW_KEY = "tbr-view";
 
 function subscribe(cb: () => void) {
   window.addEventListener(EVENT, cb);
@@ -55,6 +59,14 @@ function readDarkClass(): boolean {
   return document.documentElement.classList.contains("dark");
 }
 
+function readView(): View {
+  try {
+    return window.localStorage.getItem(VIEW_KEY) === "hall" ? "hall" : "classic";
+  } catch {
+    return "classic";
+  }
+}
+
 const PrefContext = createContext<Ctx | null>(null);
 
 export function PrefProvider({ children }: { children: ReactNode }) {
@@ -69,6 +81,7 @@ export function PrefProvider({ children }: { children: ReactNode }) {
     () => "light",
   );
   const dark = useSyncExternalStore(subscribe, readDarkClass, () => false);
+  const view = useSyncExternalStore<View>(subscribe, readView, () => "classic");
 
   const setLang = useCallback((l: Lang) => {
     try {
@@ -93,9 +106,18 @@ export function PrefProvider({ children }: { children: ReactNode }) {
     emit();
   }, []);
 
+  const setView = useCallback((v: View) => {
+    try {
+      window.localStorage.setItem(VIEW_KEY, v);
+    } catch {
+      /* ignore */
+    }
+    emit();
+  }, []);
+
   void dark;
 
-  const value: Ctx = { lang, setLang, t: dict[lang], theme, toggleTheme };
+  const value: Ctx = { lang, setLang, t: dict[lang], theme, toggleTheme, view, setView };
   return (
     <PrefContext.Provider value={value}>
       <MotionConfig reducedMotion="user">{children}</MotionConfig>

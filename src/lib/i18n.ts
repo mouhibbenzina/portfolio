@@ -138,6 +138,15 @@ export const dict = {
       credits: "Drawn and built by Mouhib — dynamic edition.",
       copyright: "All rights reserved.",
     },
+    walkthrough: {
+      enterTitle: "Walk-through",
+      enterSub: "A guided tour of the workshop, room by room.",
+      enterHint: "Scroll down to enter",
+      jump: "Jump to a room",
+      keys: "↑ ↓ navigate · Esc exit",
+      enterRoom: "Enter section",
+      close: "Classic view",
+    },
   },
   fr: {
     nav: {
@@ -277,6 +286,15 @@ export const dict = {
       },
       credits: "Dessiné et construit par Mouhib — édition dynamique.",
       copyright: "Tous droits réservés.",
+    },
+    walkthrough: {
+      enterTitle: "Visite guidée",
+      enterSub: "Une visite de l'atelier, salle par salle.",
+      enterHint: "Défile pour entrer",
+      jump: "Aller à une salle",
+      keys: "↑ ↓ naviguer · Échap pour sortir",
+      enterRoom: "Entrer dans la section",
+      close: "Vue classique",
     },
   },
 };
