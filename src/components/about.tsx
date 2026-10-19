@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { profile } from "@/lib/data";
 import { Fade } from "./animated";
 import { usePref } from "./providers";
@@ -71,23 +72,14 @@ export function About() {
         <Fade delay={0.15} className="justify-self-center lg:justify-self-end">
           <figure className="relative w-64 rotate-[-3deg] border-2 border-ink bg-surface p-3 pb-6 shadow-[6px_6px_0_var(--ink)] transition-transform hover:rotate-0">
             <span className="absolute -top-3 left-1/2 h-6 w-20 -translate-x-1/2 rotate-[-2deg] bg-signal/80" />
-            <div className="aspect-[4/5] w-full overflow-hidden border-2 border-ink bg-paper-2">
-              <svg viewBox="0 0 200 250" className="h-full w-full" role="img" aria-label={a.portraitAlt}>
-                <rect width="200" height="250" fill="var(--paper-2)" />
-                <circle cx="100" cy="96" r="52" fill="var(--surface)" stroke="var(--ink)" strokeWidth="4" />
-                <text
-                  x="100"
-                  y="114"
-                  textAnchor="middle"
-                  fontFamily="var(--font-anton)"
-                  fontSize="44"
-                  fill="var(--signal)"
-                >
-                  {profile.monogram.replace(".", "")}
-                </text>
-                <path d="M40 250 Q 100 160 160 250" fill="var(--ink)" opacity="0.9" />
-                <path d="M20 40 q 30 18 60 0" fill="none" stroke="var(--ink)" strokeWidth="3" filter="url(#wobble)" />
-              </svg>
+            <div className="relative aspect-square w-full overflow-hidden border-2 border-ink bg-paper-2">
+              <Image
+                src="/mouhib.png"
+                alt={a.portraitAlt}
+                fill
+                sizes="16rem"
+                className="object-cover"
+              />
             </div>
             <figcaption className="mt-3 text-center font-hand text-xl">
               {a.polaroidCaption}
