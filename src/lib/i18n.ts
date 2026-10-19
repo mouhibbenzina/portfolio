@@ -45,7 +45,7 @@ export const dict = {
       stats: [
         { value: "3", label: "featured projects", sub: "built to ship, not to demo" },
         { value: "18+", label: "technologies", sub: "and counting, every week" },
-        { value: "4", label: "certifications", sub: "from DevOps to AI" },
+        { value: "13", label: "certifications", sub: "from Python to AI" },
         { value: "1", label: "mission", sub: "simplify human complexity" },
       ],
       polaroidCaption: "Mouhib, Zaghouan",
@@ -185,7 +185,7 @@ export const dict = {
       stats: [
         { value: "3", label: "projets en vedette", sub: "faits pour livrer, pas pour démo" },
         { value: "18+", label: "technologies", sub: "et ça continue chaque semaine" },
-        { value: "4", label: "certifications", sub: "du DevOps à l'IA" },
+        { value: "13", label: "certifications", sub: "du Python à l'IA" },
         { value: "1", label: "mission", sub: "simplifier la complexité humaine" },
       ],
       polaroidCaption: "Mouhib, Zaghouan",
