@@ -89,13 +89,23 @@ export const skills = [
   { short: "MongoDB", full: "MongoDB", hot: true },
 ];
 
-export const certificates = [
+type Certificate = {
+  title: string;
+  provider: string;
+  duration: { en: string; fr: string };
+  date: { en: string; fr: string };
+  tilt: string;
+  file?: string;
+};
+
+export const certificates: Certificate[] = [
   {
     title: "Basics of Python (CR641)",
     provider: "UniAthena — Cambridge International Qualifications",
     duration: { en: "Online · Level 7", fr: "En ligne · Niveau 7" },
     date: { en: "August 15, 2026", fr: "15 Août 2026" },
     tilt: "-2.2deg",
+    file: "/certs/cr641.pdf",
   },
   {
     title: "Basics of Machine Learning Algorithms (CR640)",
@@ -103,6 +113,7 @@ export const certificates = [
     duration: { en: "Online · Level 7", fr: "En ligne · Niveau 7" },
     date: { en: "August 15, 2026", fr: "15 Août 2026" },
     tilt: "1.6deg",
+    file: "/certs/cr640.pdf",
   },
   {
     title: "Basics in Machine Learning (CR642)",
@@ -110,6 +121,7 @@ export const certificates = [
     duration: { en: "Online · Level 7", fr: "En ligne · Niveau 7" },
     date: { en: "August 15, 2026", fr: "15 Août 2026" },
     tilt: "-1.2deg",
+    file: "/certs/cr642.pdf",
   },
   {
     title: "Basics of Data Science (CR1061)",
@@ -117,6 +129,7 @@ export const certificates = [
     duration: { en: "Online · Level 7", fr: "En ligne · Niveau 7" },
     date: { en: "August 15, 2026", fr: "15 Août 2026" },
     tilt: "2.4deg",
+    file: "/certs/cr1061.pdf",
   },
   {
     title: "Basics of SQL Statements & Indexes (CR1260)",
@@ -124,6 +137,7 @@ export const certificates = [
     duration: { en: "Online · Level 7", fr: "En ligne · Niveau 7" },
     date: { en: "August 15, 2026", fr: "15 Août 2026" },
     tilt: "-1.6deg",
+    file: "/certs/cr1260.pdf",
   },
   {
     title: "Basics of Microsoft Power BI (CR920)",
@@ -131,6 +145,7 @@ export const certificates = [
     duration: { en: "Online · Level 7", fr: "En ligne · Niveau 7" },
     date: { en: "August 15, 2026", fr: "15 Août 2026" },
     tilt: "2.2deg",
+    file: "/certs/cr920.pdf",
   },
   {
     title: "Basics of Agents & Environments in AI (CR1272)",
@@ -138,6 +153,7 @@ export const certificates = [
     duration: { en: "Online · Level 7", fr: "En ligne · Niveau 7" },
     date: { en: "August 14, 2026", fr: "14 Août 2026" },
     tilt: "-2.4deg",
+    file: "/certs/cr1272.pdf",
   },
   {
     title: "Master ChatGPT (CR1198)",
@@ -166,6 +182,7 @@ export const certificates = [
     duration: { en: "19 hours · 96%", fr: "19 heures · 96%" },
     date: { en: "August 15, 2026", fr: "15 Août 2026" },
     tilt: "-1.4deg",
+    file: "/certs/cs207.pdf",
   },
   {
     title: "EF SET English Certificate",
@@ -173,6 +190,7 @@ export const certificates = [
     duration: { en: "B2 Upper Intermediate · 60/100", fr: "B2 Intermédiaire · 60/100" },
     date: { en: "2026", fr: "2026" },
     tilt: "2deg",
+    file: "/certs/ef-set.pdf",
   },
   {
     title: "International Computer Science Competition 2026",
@@ -180,6 +198,7 @@ export const certificates = [
     duration: { en: "Participation", fr: "Participation" },
     date: { en: "July 20, 2026", fr: "20 Juillet 2026" },
     tilt: "-1.8deg",
+    file: "/certs/icsc-2026.pdf",
   },
 ];
 

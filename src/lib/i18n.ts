@@ -57,6 +57,8 @@ export const dict = {
     certificates: {
       view: "View",
       issuedBy: "Issued by",
+      openPdf: "Open PDF",
+      close: "Close",
     },
     projects: {
       sheet: "Sheet",
@@ -208,6 +210,8 @@ export const dict = {
     certificates: {
       view: "Voir",
       issuedBy: "Délivré par",
+      openPdf: "Ouvrir le PDF",
+      close: "Fermer",
     },
     projects: {
       sheet: "Fiche",
